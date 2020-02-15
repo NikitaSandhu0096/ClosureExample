@@ -33,3 +33,69 @@ func mySort(s1: String, s2: String) ->Bool{
 
 print(mySort(s1: "abc", s2: "aac"))
 
+print(country)
+//country.sort()
+//let c = country.sorted()
+//print(country)
+//print(c)
+
+//country.sort(by: mySort(s1:s2:))
+country.sort(by:
+    { (s1 : String, s2 : String) -> Bool in
+            return s1 > s2
+    })
+
+country.sort(by:
+{ (s1 , s2) -> Bool in
+        return s1 > s2
+})
+
+country.sort(by:
+{ s1, s2 -> Bool in
+        return s1 > s2
+})
+
+country.sort(by:
+{ s1, s2 in
+        return s1 > s2
+})
+
+country.sort(by:
+{
+        return $0 > $1
+})
+
+country.sort(by: > )
+
+print(country)
+
+country.sort(by: < )
+
+print(country)
+
+var s = country.map { (str) -> String in
+    if str.count == 5{
+        return str
+    }
+    return String()
+}
+
+print(s)
+
+s = country.map{(str) -> String in
+    return "\(str.count) - \(str)"
+}
+
+print(s)
+
+var c = country.filter{(str) -> Bool in
+    return str.count == 5
+}
+
+print(c)
+
+country.removeAll { (str) -> Bool in
+    return str.count == 5
+}
+
+print(country)
