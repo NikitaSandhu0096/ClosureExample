@@ -25,3 +25,11 @@ func test(a : Int, b : (Int, Int) -> Void){
 
 test(a: 20, b: f)
 
+var country = ["Canada", "Abd", "India", "Bhutan", "Nepal", "Chine", "USA", "Mexico"]
+
+func mySort(s1: String, s2: String) ->Bool{
+    return s1 > s2
+}
+
+print(mySort(s1: "abc", s2: "aac"))
+
