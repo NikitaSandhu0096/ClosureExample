@@ -8,5 +8,20 @@
 
 import Foundation
 
-print("Hello, World!")
+func add(a : Int, b : Int) {
+    print(a + b)
+}
+
+add(a: 10, b: 20)
+
+var f : (Int, Int) -> Void
+f = add
+
+f(10,40)
+
+func test(a : Int, b : (Int, Int) -> Void){
+    b(a, 10)
+}
+
+test(a: 20, b: f)
 
